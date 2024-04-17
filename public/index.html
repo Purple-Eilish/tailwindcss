@@ -1,11 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind.config.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#FF6363',
+                        secondary: {
+                            100: '#E2E2D5',
+                            200: '#888883'
+                        }
+                    },
+                    fontFamily: {
+                        body: ['Nunito']
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    ttuiyuk,guyj,
+
+<body class="text-gray-600 font-body">
+    <div>
+        <div>
+            <nav>
+                <div>
+                    <h1 class="font-bold uppercase p-4">
+                        <a href="/">Food ninja</a>
+                    </h1>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <main class="px-16 py-6 bg-gray-100">
+            <div class="flex justify-center md:justify-end">
+                <a href="#" class="text-clifford">Log In</a>
+                <a href="#" class="text-clifford ml-2">Sign In</a>
+            </div>
+
+            <header>
+                <h2 class="text-gray-700 text-6xl font-semibold border-b border-gray-100">Recipes</h2>
+                <h3 class="text-2xl font-semibold">For Ninjas</h3>
+            </header>
+
+
+            <div>
+                <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Lastest Recipes</h4>
+
+                <div class="mt-8">
+                    <!-- cards go here -->
+                    <div class="card">
+                        <img src="assets/pouf.svg" alt="pouf" class="w-full h-60 sm:h-52 object-cover">
+                        <div  class="m-4">
+                            <span class="font-bold">5 Bean Chilli Stew</span>
+                            <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+                        </div>
+                        <div class="bg-secondary-100 text-secondary-200 text-xs uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2">
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="font-bold mt-12 pb-2"> Most Popular</h4>
+                <div class="mt-8">
+                    <!-- cards go here -->
+                </div>
+
+                <div class="flex justify-center">
+                    <div class="bg-secondary-100 text-secondary-200">Load More</div>
+                </div>
+            </div>
+
+        </main>
+    </div>
 </body>
+
 </html>
